@@ -26,7 +26,7 @@ def get_data(url, zodiac_sing, topic):
     :param topic: тема гороскопа
     :return:
     """
-    soup = BeautifulSoup(url.text, 'lxml')
+    soup = BeautifulSoup(url.text, 'html5lib')
     return soup.find(zodiac_sing).find(topic).text
 
 
